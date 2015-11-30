@@ -1,0 +1,1324 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Lịch Phim | Thế giới giải trí trong tầm tay | Lich phim, phim chieu rap, gia ve, phim
+        chiếu rạp, giá vé</title>
+    <meta name="description" content="vCinema, Lịch Phim, Ứng dụng xem trailer, nội dung, lịch chiếu phim các rạp
+	trên toàn quốc nhanh chóng, dễ dàng & hoàn toàn Free
+	trên Android và iPhone"/>
+    <meta name="keywords"
+          content="vCinema, cinema, phim, lịch phim, lịch chiếu phim, ứng dụng, tìm phim, android, iphone"/>
+    <link rel="stylesheet" type="text/css" href="http://lichphim.vn/assets/fbapp/main.css">
+
+    <script type="text/javascript"
+            src="http://lichphim.vn/assets/fbapp/jquery/jquery-1.9.1.min.js"></script>
+
+
+    <!-- datepicker -->
+    <script type="text/javascript"
+            src="http://lichphim.vn/assets/fbapp/jquery/jquery-ui.js"></script>
+    <link rel="stylesheet" type="text/css"
+          href="http://lichphim.vn/assets/fbapp/jquery/jquery-ui.css"/>
+    <!-- datepicker -->
+
+    <style>
+        @font-face
+        {
+        font-family:myFont;
+        src: url(http://lichphim.vn/assets/fbapp/font/segoeui.ttf);
+        src: url(http://lichphim.vn/assets/fbapp/font/segoeuil.ttf);
+        }
+    </style>
+
+
+    <!-- Import required css and js files -->
+    <link rel="stylesheet" type="text/css"
+          href="http://lichphim.vn/assets/fbapp/load/minimial_clasic_skin.css">
+    <link rel="stylesheet" type="text/css"
+          href="http://lichphim.vn/assets/fbapp/load/html_content.css">
+    <link rel="stylesheet" type="text/css" href="http://lichphim.vn/assets/fbapp/page.css">
+
+    <script type="text/javascript" src="http://lichphim.vn/assets/fbapp/FWDPage.js"></script>
+    <script type="text/javascript"
+            src="http://lichphim.vn/assets/fbapp/java/FWDPageMenu.js"></script>
+    <script type="text/javascript"
+            src="http://lichphim.vn/assets/fbapp/java/FWDPageMenuButton.js"></script>
+    <script type="text/javascript"
+            src="http://lichphim.vn/assets/fbapp/java/FWDPageThumbs.js"></script>
+    <script type="text/javascript"
+            src="http://lichphim.vn/assets/fbapp/java/FWDPageThumb.js"></script>
+    <script type="text/javascript"
+            src="http://lichphim.vn/assets/fbapp/java/FWDPageSimpleButton.js"></script>
+    <script type="text/javascript"
+            src="http://lichphim.vn/assets/fbapp/java/FWDSlidersMenu.js"></script>
+    <script type="text/javascript"
+            src="http://lichphim.vn/assets/fbapp/java/FWDSlidersMenuButton.js"></script>
+    <script type="text/javascript" src="http://lichphim.vn/assets/fbapp/java/FWDSlider.js"></script>
+    <script type="text/javascript"
+            src="http://lichphim.vn/assets/fbapp/java/FWDSimpleButtonUrl.js"></script>
+    <script type="text/javascript"
+            src="http://lichphim.vn/assets/fbapp/java/FWDCounterButton.js"></script>
+    <script type="text/javascript"
+            src="http://lichphim.vn/assets/fbapp/java/FWDResetButton.js"></script>
+    <script type="text/javascript"
+            src="http://lichphim.vn/assets/fbapp/java/FWDOnOffButton.js"></script>
+    <script type="text/javascript"
+            src="http://lichphim.vn/assets/fbapp/java/FWDRoyal3DCoverflow.js"></script>
+
+    <!-- Setup the coverflow (all settings are explained in detail in the documentation files) -->
+
+    <script type="text/javascript">
+			var coverflow;
+
+			FWDR3DCovUtils.onReady(function(){
+				init();
+			})
+
+			function setupCoverflow(){
+				coverflow = new FWDRoyal3DCoverflow({
+
+					//required settings
+					coverflowHolderDivId:"myDiv",
+					coverflowDataListDivId:"playList1",
+					displayType:"responsive",
+					autoScale:"yes",
+					coverflowWidth:700,
+					coverflowHeight:273,					skinPath:"http://lichphim.vn/assets/fbapp/load/minimal_clasic_skin",
+
+					//main settings
+					backgroundColor:"",
+					backgroundImagePath:"",
+					thumbnailsBackgroundImagePath:"",
+					scrollbarBackgroundImagePath:"http://lichphim.vn/assets/fbapp/load/minimal_clasic_skin/",
+					backgroundRepeat:"repeat-x",
+					showDisplay2DAlways:"no",
+					coverflowStartPosition:"center",
+					numberOfThumbnailsToDisplayLeftAndRight:1,
+					slideshowDelay:5000,
+					autoplay:"yes",
+					showPrevButton:"no",
+					showNextButton:"no",
+					showSlideshowButton:"no",
+					disableNextAndPrevButtonsOnMobile:"no",
+					controlsMaxWidth:700,
+					slideshowTimerColor:"#000000",
+					showContextMenu:"no",
+					addKeyboardSupport:"yes",
+
+					//thumbnail settings
+					thumbnailWidth:420,
+					thumbnailHeight:262,
+					thumbnailXOffset3D:20,
+					thumbnailXSpace3D:150,
+					thumbnailZOffset3D:60,					thumbnailZSpace3D:93,
+					thumbnailYAngle3D:60,
+					thumbnailXOffset2D:20,
+					thumbnailXSpace2D:30,
+					thumbnailBorderSize:0,
+					thumbnailBackgroundColor:"#FFFFFF",
+					thumbnailBorderColor1:"#FFFFFF",
+					thumbnailBorderColor2:"#FFFFFF",
+					transparentImages:"no",
+					maxNumberOfThumbnailsOnMobile:13,
+					showThumbnailsGradient:"yes",
+					showThumbnailsHtmlContent:"no",
+					textBackgroundColor:"",
+					textBackgroundOpacity:.7,
+					showText:"yes",
+					showTextBackgroundImage:"no",
+					showThumbnailBoxShadow:"yes",
+					thumbnailBoxShadowCss:"0px 2px 2px #111111",
+					showReflection:"yes",
+					reflectionHeight:60,
+					reflectionDistance:0,
+					reflectionOpacity:.2,
+
+					//scrollbar settings
+					showScrollbar:"no",
+					disableScrollbarOnMobile:"yes",
+					enableMouseWheelScroll:"yes",
+					scrollbarHandlerWidth:300,
+					scrollbarTextColorNormal:"#000000",
+					scrollbarTextColorSelected:"#000000",
+
+					//combobox settings
+					showComboBox:"no",
+					startAtCategory:1,
+					selectLabel:"SELECT CATEGORIES",
+					allCategoriesLabel:"All Categories",
+					showAllCategories:"no",
+					comboBoxPosition:"topright",
+					selectorBackgroundNormalColor1:"#FFFFFF",
+					selectorBackgroundNormalColor2:"#FFFFFF",
+					selectorBackgroundSelectedColor1:"#000000",
+					selectorBackgroundSelectedColor2:"#000000",
+					selectorTextNormalColor:"#000000",
+					selectorTextSelectedColor:"#FFFFFF",
+					buttonBackgroundNormalColor1:"#FFFFFF",
+					buttonBackgroundNormalColor2:"#FFFFFF",
+					buttonBackgroundSelectedColor1:"#000000",
+					buttonBackgroundSelectedColor2:"#000000",
+					buttonTextNormalColor:"#000000",
+					buttonTextSelectedColor:"#FFFFFF",
+					comboBoxShadowColor:"#222222",
+					comboBoxHorizontalMargins:12,
+					comboBoxVerticalMargins:12,
+					comboBoxCornerRadius:0,
+
+					//lightbox settings
+					addLightBoxKeyboardSupport:"yes",
+					showLightBoxNextAndPrevButtons:"yes",
+					showLightBoxZoomButton:"yes",
+					showLightBoxInfoButton:"yes",
+					showLighBoxSlideShowButton:"yes",
+					showLightBoxInfoWindowByDefault:"no",
+					slideShowAutoPlay:"no",
+					lightBoxVideoAutoPlay:"no",
+					lightBoxVideoWidth:640,
+					lightBoxVideoHeight:480,
+					lightBoxIframeWidth:800,
+					lightBoxIframeHeight:600,
+					lightBoxBackgroundColor:"#000000",
+					lightBoxInfoWindowBackgroundColor:"#FFFFFF",
+					lightBoxItemBorderColor1:"#FFFFFF",
+					lightBoxItemBorderColor2:"#FFFFFF",
+					lightBoxItemBackgroundColor:"#333333",
+					lightBoxMainBackgroundOpacity:.8,
+					lightBoxInfoWindowBackgroundOpacity:.9,
+					lightBoxBorderSize:0,
+					lightBoxBorderRadius:0,
+					lightBoxSlideShowDelay:4000
+				});
+			}
+
+    </script>
+    <!-- end script coverflow -->
+
+
+    <!-- tool tip -->
+    <style>
+        label {
+        display: inline-block;
+        width: 5em;
+        }
+    </style>
+    <script>
+	  $(function() {
+		$( document ).tooltip({
+		  track: true,
+		   content: function () {
+				  return $(this).prop('title');
+			  }
+		});
+	  });
+
+    </script>
+    <!-- end tool tip -->
+
+    <!-- script open menu -->
+    <script>
+	  function Openurl(url){
+	  location.href = url;
+		}
+
+    </script>
+    <!-- end script open menu -->
+
+    <!-- script Notification -->
+    <script src="http://lichphim.vn/assets/fbapp/jquery/miniNotification.js"></script>
+    <script>
+	  $(function() {
+		$('#notification').click(function(e) {
+			e.preventDefault();
+			$('.notification').miniNotification({
+			closeButton: true,
+			closeButtonText: '[x]',
+			time: 2500
+		});
+	   });
+
+	  });
+
+    </script>
+    <!-- end script Notification -->
+
+</head>
+<body class="bd1">
+
+<!-- script facebook api -->
+<div id="fb-root"></div>
+
+
+<script>
+    window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '1384645955090433',
+          xfbml      : true,
+          version    : 'v2.0'
+        });
+		FB.getLoginStatus(function(response) {
+		  if (response.status === 'not_authorized') {
+			console.log(response.authResponse.accessToken);
+			addPermistion();
+		  }
+		});
+	};
+		function addPermistion() {
+		FB.login(function(response) {
+			   // handle the response
+			 }, {scope: 'public_profile,publish_actions,user_friends,email',auth_type: 'rerequest'});
+		}
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/vi_VN/all.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+
+
+
+</script>
+
+<script>
+	/*$(function() {
+	FB.Canvas.scrollTo(0, 0);
+	});*/
+	$(document).ready(function(){
+		$("a").click(function(){
+		scrollTo(0);
+		});
+	});
+	function scrollTo(y){
+    FB.Canvas.getPageInfo(function(pageInfo){
+            $({y: pageInfo.scrollTop}).animate(
+                {y: y},
+                {duration: 200, step: function(offset){
+                    FB.Canvas.scrollTo(0, offset);
+                }
+            });
+		});
+	}
+
+	function sendRequestToRecipients() {
+		var user_ids = document.getElementsByName("user_ids")[0].value;
+		FB.ui({method: 'apprequests',
+		  message: 'đã mời bạn xem ứng dụng Lịch phim',
+		  to: user_ids
+		}, requestCallback);
+	}
+
+	function sendRequestViaMultiFriendSelector() {
+	FB.ui({method: 'apprequests',
+			title: 'vCinema',
+		  message: 'đã mời bạn xem ứng dụng Lịch phim',
+		}, requestCallback);
+	}
+
+	function requestCallback(response) {
+		// Handle callback here
+	}
+
+	function FacebookInviteFriends () {
+		  FB.ui ({
+		   method: 'apprequests',
+		   message: 'Invite your friends'
+		  });
+	}
+
+
+
+</script>
+<!-- end script facebook api -->
+
+<div class="main">
+    <div class="nav_menu">
+        <div class="content_menu">
+            <div class="content_menu_sub">
+                <div class="logo">
+                    <div onclick="Openurl('http://lichphim.vn/fbapp/lichchieu');"><img
+                            src="http://lichphim.vn/assets/fbapp/images/logo.png" alt="vCinema">
+                    </div>
+                </div>
+                <div class="list_item_menu">
+                    <ul>
+                        <li class="active"
+                            onclick="Openurl('http://lichphim.vn/fbapp/lichchieu');"/>
+                        Đang Chiếu</li>
+                        <li onclick="Openurl('http://lichphim.vn/fbapp/sapchieu');"/>
+                        Sắp Chiếu</li>
+                        <li onclick="Openurl('http://lichphim.vn/fbapp/dachieu');"/>
+                        Đã Chiếu</li>
+                        <li onclick="Openurl('http://lichphim.vn/fbapp/rapchieu');"/>
+                        Rạp Chiếu</li>
+
+
+                        <li id="notification"/>
+                        Event</li>
+                    </ul>
+                </div>
+                <div class="notification">
+                    <p>Hiện tại chưa có event mới, xin bạn vui lòng quay lại sau! Xin cám ơn đã ghé
+                        thăm.</p>
+                </div>
+
+                <div class="bt_location">
+                    <form action="http://lichphim.vn/fbapp/lichchieu" method="post"
+                          id="form_filter">
+                        <label>
+                            <select name="city_choise" onchange="this.form.submit()">
+                                <option value="1" selected>Khu vực Hà Nội</option>
+                                <option value="2">Khu vực Hồ Chí Minh</option>
+                                <option value="4">Khu vực Đà Nẵng</option>
+                                <option value="5">Khu vực Đồng Nai</option>
+                                <option value="6">Khu vực Hải Phòng</option>
+                                <option value="7">Khu vực Khánh Hòa</option>
+                                <option value="8">Khu vực Quảng Ninh</option>
+                                <option value="11">Khu vực Huế</option>
+                                <option value="12">Khu vực Bắc Giang</option>
+                                <option value="13">Khu vực Bình Thuận</option>
+                                <option value="14">Khu vực Bình Dương</option>
+                                <option value="15">Khu vực Cần Thơ</option>
+                                <option value="16">Khu vực Biên Hòa</option>
+                                <option value="17">Khu vực Vũng Tàu</option>
+                                <option value="18">Khu vực Quy nhơn</option>
+                                <option value="19">Khu vực Buôn Mê Thuột</option>
+                                <option value="20">Khu vực Hải Dương</option>
+                            </select>
+                        </label>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="center">
+        <div class="center_content">
+            <div class="col_1">
+
+
+                <div class="cover_flow" style="cursor:move; margin-left: 38px;">
+
+                    <!-- header -->
+                    <div id="mainHeader" style="display:none">
+                        <img id="logoImage" src=""/>
+                        <img id="byFWD" src=""/>
+                    </div>
+
+                    <!-- menu holder -->
+                    <div id="menuHolder" style="display:none"></div>
+
+                    <!-- div used as a holder for the coverflow -->
+                    <div id="myDiv"></div>
+
+                    <!-- sliders holder -->
+                    <div id="mainSlidersHolder" style="display:none">
+                        <p id="preview"></p>
+                        <div id="slidersHolder"></div>
+                    </div>
+
+                    <!-- thumbnails holder -->
+                    <div id="mainThumbsHolder" style="display:none">
+                        <p id="examples"></p>
+                        <div id="thumbsHolder"></div>
+                    </div>
+
+                    <!-- what is -->
+                    <div id="mainInfoHolder" style="display:none">
+                        <p id="whatIsMainText"></p>
+                        <p class="headerText"></p>
+                        <div id="mainFeatureTableHolder">
+                            <table>
+                                <tr>
+                                    <td id="col1" class="firstTd">
+                                    </td>
+                                    <td class="secondTd"></td>
+                                    <td id="col2">
+                                    </td>
+                                <tr>
+                            </table>
+                        </div>
+                        <p class="headerText"></p>
+                        <div id="videoHolder"></div>
+                    </div>
+                    <div id="specialNotesMainHolder">
+                        <div id="specialNotes">
+                        </div>
+                    </div>
+                    <!-- coverflow data -->
+                    <ul id="playList1" style="display: none;">
+
+                        <!-- category  -->
+                        <ul data-cat="Category one">
+                            <ul>
+                                <li data-type="link"
+                                    data-url="http://lichphim.vn/fbapp/chitiet/1018/nhung_manh_ghep_cam_xuc___inside_out"
+                                    data-target="_blank"></li>
+                                <li data-thumbnail-path="http://lichphim.vn/assets/images/images/1439949131.jpg"></li>
+                                <li data-thumbnail-text="" data-thumbnail-text-title-offset="0"
+                                    data-thumbnail-text-offset-top="-262"
+                                    data-thumbnail-text-offset-bottom="0">
+                                    <span class='hot-icon2'></span>
+                                    <a href="http://lichphim.vn/fbapp/chitiet/1018/nhung_manh_ghep_cam_xuc___inside_out"
+                                       title="
+					<div class=hien_tooltip >
+					<span class=tooltip_title>NHỮNG MẢNH GHÉP CẢM XÚC (INSIDE OUT)</span></br>
+					<span class=tooltip_bold>Thể loại:</span> <span class=tooltip_text>Gia đình,Hoạt hình</span></br>
+					<span class=tooltip_bold>Thời lượng:</span> <span class=tooltip_text>90 phút</span></br>
+					<span class=tooltip_bold>Đạo diễn:</span> <span class=tooltip_text>Pete Docter</span></br>
+					<span class=tooltip_bold>Diễn viên:</span> <span class=tooltip_text>Amy Poehler (Joy), Bill Hader (Fear), Lewis Black (Anger), Mindy Kaling (Disgust) and Phyllis Smith (Sadness).</span></br>
+					<span class=tooltip_bold>Điểm IMDB:</span> <span class=tooltip_imdb>8.6/10</span></br>
+					<span class=tooltip_bold>Khởi chiếu:</span> <span class=tooltip_text>2015-08-21</span></br>
+					<span class=tooltip_content>Việc trưởng thành vốn là một con đường gập ghềnh, và cô bé Riley cũng phải trải qua điều tương tự. Khi cha bắt đầu công việc mới ở San Francisco, Riley buộc phải nói lời tạm biệt với cuộc...</span></br></div>
+					" class="tool_tip_link" style="height: 262px; width: 420px;">
+
+                                    </a>
+                                </li>
+                            </ul>
+                        </ul>
+                        <!-- end -->
+                    </ul>
+                </div>
+                <div class="content_detail">
+
+                    <div class="content_item" id="con_1">
+                        <div class="content_item_list_1">
+                            <div class="title_rapchieu">
+                                <div class="item_title">NHỮNG MẢNH GHÉP CẢM XÚC</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="title_grid_home">Phim mới khởi chiếu</div>
+                <div class="list_phim_dachieu">
+
+                    <div class="item_phimdachieu">
+                        <div class="img_item_phim">
+                            <span class='new-icon'></span>
+                            <a href="http://lichphim.vn/fbapp/chitiet/1292/chu_khung_long_tot_bung_____the_good_dinosaur"
+                               title="
+					<span class=tooltip_title>CHÚ KHỦNG LONG TỐT BỤNG  (THE GOOD DINOSAUR)</span></br>
+					<span class=tooltip_bold>Thể loại:</span> <span class=tooltip_text>Hoạt hình</span></br>
+					<span class=tooltip_bold>Thời lượng:</span> <span class=tooltip_text>100 phút</span></br>
+					<span class=tooltip_bold>Đạo diễn:</span> <span class=tooltip_text>Peter Sohn</span></br>
+					<span class=tooltip_bold>Diễn viên:</span> <span class=tooltip_text>Neil Patrick Harris,Lucas Neff,John Lithgow,Frances McDormand</span></br>
+					<span class=tooltip_bold>Điểm IMDB:</span> <span class=tooltip_imdb>N/A</span></br>
+					<span class=tooltip_bold>Khởi chiếu:</span> <span class=tooltip_text>2015-11-25</span></br>
+					<span class=tooltip_content>The Good Dinosaur là bộ phim hoạt hình thứ hai trong năm 2015 của Pixar, đặt bối cảnh trong thế giới nơi khủng long không hề bị tuyệt diệt. Ở đó, chú khủng long xanh mồ côi Arlo trên đường...</span></br>
+					" class="tool_tip_link2">
+                                <img src="http://lichphim.vn/assets/images/images/1448413472.jpg"/>
+                            </a>
+                        </div>
+
+                        <div class="name_item_phim"><a
+                                href="http://lichphim.vn/fbapp/chitiet/1292/chu_khung_long_tot_bung_____the_good_dinosaur"
+                                title="
+					<span class=tooltip_title>CHÚ KHỦNG LONG TỐT BỤNG  (THE GOOD DINOSAUR)</span></br>
+					<span class=tooltip_bold>Thể loại:</span> <span class=tooltip_text>Hoạt hình</span></br>
+					<span class=tooltip_bold>Thời lượng:</span> <span class=tooltip_text>100 phút</span></br>
+					<span class=tooltip_bold>Đạo diễn:</span> <span class=tooltip_text>Peter Sohn</span></br>
+					<span class=tooltip_bold>Diễn viên:</span> <span class=tooltip_text>Neil Patrick Harris,Lucas Neff,John Lithgow,Frances McDormand</span></br>
+					<span class=tooltip_bold>Điểm IMDB:</span> <span class=tooltip_imdb>N/A</span></br>
+					<span class=tooltip_bold>Khởi chiếu:</span> <span class=tooltip_text>2015-11-25</span></br>
+					<span class=tooltip_content>The Good Dinosaur là bộ phim hoạt hình thứ hai trong năm 2015 của Pixar, đặt bối cảnh trong thế giới nơi khủng long không hề bị tuyệt diệt. Ở đó, chú khủng long xanh mồ côi Arlo trên đường...</span></br>
+					" class="tool_tip_link3">CHÚ KHỦNG LONG TỐT...</a></div>
+                        <div class="view_like">
+                            <div class="like">35</div>
+                            <div class="view">248</div>
+                        </div>
+                    </div>
+
+                    <div class="item_phimdachieu">
+                        <div class="img_item_phim">
+
+                            <a href="http://lichphim.vn/fbapp/chitiet/1332/dau_truong_sinh_tu:_hung_nhai_2___the_hunger_games:_mockingjay_2"
+                               title="
+					<span class=tooltip_title>ĐẤU TRƯỜNG SINH TỬ: HÚNG NHẠI 2 (THE HUNGER GAMES: MOCKINGJAY 2)</span></br>
+					<span class=tooltip_bold>Thể loại:</span> <span class=tooltip_text>Hành động</span></br>
+					<span class=tooltip_bold>Thời lượng:</span> <span class=tooltip_text>120 phút</span></br>
+					<span class=tooltip_bold>Đạo diễn:</span> <span class=tooltip_text>Francis Lawrence</span></br>
+					<span class=tooltip_bold>Diễn viên:</span> <span class=tooltip_text>Woody Harrelson,Stanley Tucci,Liam Hemsworth,Elizabeth Banks,Jennifer Lawrence,Josh Hutcherson,Julianne Moore</span></br>
+					<span class=tooltip_bold>Điểm IMDB:</span> <span class=tooltip_imdb>N/A</span></br>
+					<span class=tooltip_bold>Khởi chiếu:</span> <span class=tooltip_text>2015-11-20</span></br>
+					<span class=tooltip_content>Đấu Trường Sinh Tử: Húng Nhại 2 - The Hunger Games: MockingJay 2: &nbsp;Với kinh phí đầu tư khổng lồ 250 triệu đô la tính từ phần trước, THE HUNGER GAMES: MOCKINGJAY PART 2 sẽ là chương cuối cùng, và...</span></br>
+					" class="tool_tip_link2">
+                                <img src="http://lichphim.vn/assets/images/images/1445216738.jpg"/>
+                            </a>
+                        </div>
+
+                        <div class="name_item_phim"><a
+                                href="http://lichphim.vn/fbapp/chitiet/1332/dau_truong_sinh_tu:_hung_nhai_2___the_hunger_games:_mockingjay_2"
+                                title="
+					<span class=tooltip_title>ĐẤU TRƯỜNG SINH TỬ: HÚNG NHẠI 2 (THE HUNGER GAMES: MOCKINGJAY 2)</span></br>
+					<span class=tooltip_bold>Thể loại:</span> <span class=tooltip_text>Hành động</span></br>
+					<span class=tooltip_bold>Thời lượng:</span> <span class=tooltip_text>120 phút</span></br>
+					<span class=tooltip_bold>Đạo diễn:</span> <span class=tooltip_text>Francis Lawrence</span></br>
+					<span class=tooltip_bold>Diễn viên:</span> <span class=tooltip_text>Woody Harrelson,Stanley Tucci,Liam Hemsworth,Elizabeth Banks,Jennifer Lawrence,Josh Hutcherson,Julianne Moore</span></br>
+					<span class=tooltip_bold>Điểm IMDB:</span> <span class=tooltip_imdb>N/A</span></br>
+					<span class=tooltip_bold>Khởi chiếu:</span> <span class=tooltip_text>2015-11-20</span></br>
+					<span class=tooltip_content>Đấu Trường Sinh Tử: Húng Nhại 2 - The Hunger Games: MockingJay 2: &nbsp;Với kinh phí đầu tư khổng lồ 250 triệu đô la tính từ phần trước, THE HUNGER GAMES: MOCKINGJAY PART 2 sẽ là chương cuối cùng, và...</span></br>
+					" class="tool_tip_link3">ĐẤU TRƯỜNG SINH...</a></div>
+                        <div class="view_like">
+                            <div class="like">253</div>
+                            <div class="view">420</div>
+                        </div>
+                    </div>
+
+                    <div class="item_phimdachieu">
+                        <div class="img_item_phim">
+
+                            <a href="http://lichphim.vn/fbapp/chitiet/1438/bi_mat_sau_anh_mẮt___the_secret_in_their_eyes"
+                               title="
+					<span class=tooltip_title>BÍ MẬT SAU ÁNH MẮT (THE SECRET IN THEIR EYES)</span></br>
+					<span class=tooltip_bold>Thể loại:</span> <span class=tooltip_text>Hình sự</span></br>
+					<span class=tooltip_bold>Thời lượng:</span> <span class=tooltip_text>129 phút</span></br>
+					<span class=tooltip_bold>Đạo diễn:</span> <span class=tooltip_text>Billy Ray</span></br>
+					<span class=tooltip_bold>Diễn viên:</span> <span class=tooltip_text>Nicole Kidman, Chiwetel Ejiofor, Julia Roberts,...</span></br>
+					<span class=tooltip_bold>Điểm IMDB:</span> <span class=tooltip_imdb>N/A</span></br>
+					<span class=tooltip_bold>Khởi chiếu:</span> <span class=tooltip_text>2015-11-20</span></br>
+					<span class=tooltip_content>The Secret In Their Eyes là bản làm lại bộ phim Argentina xuất sắc từng giành giải Oscar năm 2009. Nữ diễn viên Julia Robert vào vai điều tra viên FBI đã phát hiện ra xác chính con gái mình...</span></br>
+					" class="tool_tip_link2">
+                                <img src="http://lichphim.vn/assets/images/images/1448413662.jpg"/>
+                            </a>
+                        </div>
+
+                        <div class="name_item_phim"><a
+                                href="http://lichphim.vn/fbapp/chitiet/1438/bi_mat_sau_anh_mẮt___the_secret_in_their_eyes"
+                                title="
+					<span class=tooltip_title>BÍ MẬT SAU ÁNH MẮT (THE SECRET IN THEIR EYES)</span></br>
+					<span class=tooltip_bold>Thể loại:</span> <span class=tooltip_text>Hình sự</span></br>
+					<span class=tooltip_bold>Thời lượng:</span> <span class=tooltip_text>129 phút</span></br>
+					<span class=tooltip_bold>Đạo diễn:</span> <span class=tooltip_text>Billy Ray</span></br>
+					<span class=tooltip_bold>Diễn viên:</span> <span class=tooltip_text>Nicole Kidman, Chiwetel Ejiofor, Julia Roberts,...</span></br>
+					<span class=tooltip_bold>Điểm IMDB:</span> <span class=tooltip_imdb>N/A</span></br>
+					<span class=tooltip_bold>Khởi chiếu:</span> <span class=tooltip_text>2015-11-20</span></br>
+					<span class=tooltip_content>The Secret In Their Eyes là bản làm lại bộ phim Argentina xuất sắc từng giành giải Oscar năm 2009. Nữ diễn viên Julia Robert vào vai điều tra viên FBI đã phát hiện ra xác chính con gái mình...</span></br>
+					" class="tool_tip_link3">BÍ MẬT SAU ÁNH MẮT...</a></div>
+                        <div class="view_like">
+                            <div class="like">14</div>
+                            <div class="view">101</div>
+                        </div>
+                    </div>
+
+                    <div class="item_phimdachieu">
+                        <div class="img_item_phim">
+
+                            <a href="http://lichphim.vn/fbapp/chitiet/1440/gau_dot_bien___unnatural"
+                               title="
+					<span class=tooltip_title>GẤU ĐỘT BIẾN (UNNATURAL)</span></br>
+					<span class=tooltip_bold>Thể loại:</span> <span class=tooltip_text>Kinh dị</span></br>
+					<span class=tooltip_bold>Thời lượng:</span> <span class=tooltip_text>89 phút</span></br>
+					<span class=tooltip_bold>Đạo diễn:</span> <span class=tooltip_text>Hank Braxtan</span></br>
+					<span class=tooltip_bold>Diễn viên:</span> <span class=tooltip_text>James Remar, Sherilyn Fenn, Ron Carlson</span></br>
+					<span class=tooltip_bold>Điểm IMDB:</span> <span class=tooltip_imdb>N/A</span></br>
+					<span class=tooltip_bold>Khởi chiếu:</span> <span class=tooltip_text>2015-11-20</span></br>
+					<span class=tooltip_content><div>Một nhóm các nhà khoa học cùng đến Alaska cho cuộc nghiên cứu mới nhất của họ. Nhưng họ không ngờ rằng ác mộng kinh hoàng đang chờ mình nơi tuyết trắng. Con người đang ngày một tàn phá thiên...</span></br>
+					" class="tool_tip_link2">
+                                <img src="http://lichphim.vn/assets/images/images/1447637074.jpg"/>
+                            </a>
+                        </div>
+
+                        <div class="name_item_phim"><a
+                                href="http://lichphim.vn/fbapp/chitiet/1440/gau_dot_bien___unnatural"
+                                title="
+					<span class=tooltip_title>GẤU ĐỘT BIẾN (UNNATURAL)</span></br>
+					<span class=tooltip_bold>Thể loại:</span> <span class=tooltip_text>Kinh dị</span></br>
+					<span class=tooltip_bold>Thời lượng:</span> <span class=tooltip_text>89 phút</span></br>
+					<span class=tooltip_bold>Đạo diễn:</span> <span class=tooltip_text>Hank Braxtan</span></br>
+					<span class=tooltip_bold>Diễn viên:</span> <span class=tooltip_text>James Remar, Sherilyn Fenn, Ron Carlson</span></br>
+					<span class=tooltip_bold>Điểm IMDB:</span> <span class=tooltip_imdb>N/A</span></br>
+					<span class=tooltip_bold>Khởi chiếu:</span> <span class=tooltip_text>2015-11-20</span></br>
+					<span class=tooltip_content><div>Một nhóm các nhà khoa học cùng đến Alaska cho cuộc nghiên cứu mới nhất của họ. Nhưng họ không ngờ rằng ác mộng kinh hoàng đang chờ mình nơi tuyết trắng. Con người đang ngày một tàn phá thiên...</span></br>
+					" class="tool_tip_link3">GẤU ĐỘT BIẾN </a></div>
+                        <div class="view_like">
+                            <div class="like">19</div>
+                            <div class="view">148</div>
+                        </div>
+                    </div>
+
+                    <div class="item_phimdachieu">
+                        <div class="img_item_phim">
+
+                            <a href="http://lichphim.vn/fbapp/chitiet/1416/yeu___love" title="
+					<span class=tooltip_title>YÊU (LOVE)</span></br>
+					<span class=tooltip_bold>Thể loại:</span> <span class=tooltip_text>Tâm lý</span></br>
+					<span class=tooltip_bold>Thời lượng:</span> <span class=tooltip_text>110 phút</span></br>
+					<span class=tooltip_bold>Đạo diễn:</span> <span class=tooltip_text>Việt Max</span></br>
+					<span class=tooltip_bold>Diễn viên:</span> <span class=tooltip_text>Chi Pu, Bê Trần, Gil Lê, Phở Đặc Biệt, Chiều Xuân, Huỳnh Đông, Quang Sự, Hoàng Thy, Thanh Mỹ, Thiên Kim</span></br>
+					<span class=tooltip_bold>Điểm IMDB:</span> <span class=tooltip_imdb>N/A</span></br>
+					<span class=tooltip_bold>Khởi chiếu:</span> <span class=tooltip_text>2015-11-18</span></br>
+					<span class=tooltip_content>Tình yêu là gì? Liệu nó có khác tình bạn? Và khác thì sẽ thế nào?
+<br>
+
+Nếu bạn có cùng thắc mắc như trên thì bộ phim “Yêu” chính là câu trả lời vô cùng thú vị cho những...</span></br>
+					" class="tool_tip_link2">
+                                <img src="http://lichphim.vn/assets/images/images/1444613293.png"/>
+                            </a>
+                        </div>
+
+                        <div class="name_item_phim"><a
+                                href="http://lichphim.vn/fbapp/chitiet/1416/yeu___love" title="
+					<span class=tooltip_title>YÊU (LOVE)</span></br>
+					<span class=tooltip_bold>Thể loại:</span> <span class=tooltip_text>Tâm lý</span></br>
+					<span class=tooltip_bold>Thời lượng:</span> <span class=tooltip_text>110 phút</span></br>
+					<span class=tooltip_bold>Đạo diễn:</span> <span class=tooltip_text>Việt Max</span></br>
+					<span class=tooltip_bold>Diễn viên:</span> <span class=tooltip_text>Chi Pu, Bê Trần, Gil Lê, Phở Đặc Biệt, Chiều Xuân, Huỳnh Đông, Quang Sự, Hoàng Thy, Thanh Mỹ, Thiên Kim</span></br>
+					<span class=tooltip_bold>Điểm IMDB:</span> <span class=tooltip_imdb>N/A</span></br>
+					<span class=tooltip_bold>Khởi chiếu:</span> <span class=tooltip_text>2015-11-18</span></br>
+					<span class=tooltip_content>Tình yêu là gì? Liệu nó có khác tình bạn? Và khác thì sẽ thế nào?
+<br>
+
+Nếu bạn có cùng thắc mắc như trên thì bộ phim “Yêu” chính là câu trả lời vô cùng thú vị cho những...</span></br>
+					" class="tool_tip_link3">YÊU </a></div>
+                        <div class="view_like">
+                            <div class="like">57</div>
+                            <div class="view">441</div>
+                        </div>
+                    </div>
+
+                    <div class="item_phimdachieu">
+                        <div class="img_item_phim">
+
+                            <a href="http://lichphim.vn/fbapp/chitiet/1425/12_chom_sao:_vẽ_duòng_cho_yeu_chạy"
+                               title="
+					<span class=tooltip_title>12 CHÒM SAO: VẼ ĐƯỜNG CHO YÊU CHẠY</span></br>
+					<span class=tooltip_bold>Thể loại:</span> <span class=tooltip_text>Tình cảm</span></br>
+					<span class=tooltip_bold>Thời lượng:</span> <span class=tooltip_text>90  phút</span></br>
+					<span class=tooltip_bold>Đạo diễn:</span> <span class=tooltip_text>Vũ Ngọc Phượng</span></br>
+					<span class=tooltip_bold>Diễn viên:</span> <span class=tooltip_text>Bê Trần, Quỳnh Chi, Kim Nhã, Jun Phạm, Võ Cảnh, Jun Vũ</span></br>
+					<span class=tooltip_bold>Điểm IMDB:</span> <span class=tooltip_imdb>N/A</span></br>
+					<span class=tooltip_bold>Khởi chiếu:</span> <span class=tooltip_text>2015-11-13</span></br>
+					<span class=tooltip_content>Bộ phim 12 Chòm Sao: Vẽ đường Cho Yêu Chạy có nội dung xoay quanh chuyện tình lãng mạn nhưng không kém phần gần gũi với mỗi người. Phim gửi thông điệp: Không chòm sao nào chỉ lối ta đến...</span></br>
+					" class="tool_tip_link2">
+                                <img src="http://lichphim.vn/assets/images/images/1445484147.jpg"/>
+                            </a>
+                        </div>
+
+                        <div class="name_item_phim"><a
+                                href="http://lichphim.vn/fbapp/chitiet/1425/12_chom_sao:_vẽ_duòng_cho_yeu_chạy"
+                                title="
+					<span class=tooltip_title>12 CHÒM SAO: VẼ ĐƯỜNG CHO YÊU CHẠY</span></br>
+					<span class=tooltip_bold>Thể loại:</span> <span class=tooltip_text>Tình cảm</span></br>
+					<span class=tooltip_bold>Thời lượng:</span> <span class=tooltip_text>90  phút</span></br>
+					<span class=tooltip_bold>Đạo diễn:</span> <span class=tooltip_text>Vũ Ngọc Phượng</span></br>
+					<span class=tooltip_bold>Diễn viên:</span> <span class=tooltip_text>Bê Trần, Quỳnh Chi, Kim Nhã, Jun Phạm, Võ Cảnh, Jun Vũ</span></br>
+					<span class=tooltip_bold>Điểm IMDB:</span> <span class=tooltip_imdb>N/A</span></br>
+					<span class=tooltip_bold>Khởi chiếu:</span> <span class=tooltip_text>2015-11-13</span></br>
+					<span class=tooltip_content>Bộ phim 12 Chòm Sao: Vẽ đường Cho Yêu Chạy có nội dung xoay quanh chuyện tình lãng mạn nhưng không kém phần gần gũi với mỗi người. Phim gửi thông điệp: Không chòm sao nào chỉ lối ta đến...</span></br>
+					" class="tool_tip_link3">12 CHÒM SAO: VẼ...</a></div>
+                        <div class="view_like">
+                            <div class="like">32</div>
+                            <div class="view">419</div>
+                        </div>
+                    </div>
+
+                    <div class="item_phimdachieu">
+                        <div class="img_item_phim">
+
+                            <a href="http://lichphim.vn/fbapp/chitiet/1427/my_nhan" title="
+					<span class=tooltip_title>MỸ NHÂN</span></br>
+					<span class=tooltip_bold>Thể loại:</span> <span class=tooltip_text>Võ thuật,Thần thoại</span></br>
+					<span class=tooltip_bold>Thời lượng:</span> <span class=tooltip_text> phút</span></br>
+					<span class=tooltip_bold>Đạo diễn:</span> <span class=tooltip_text>Đinh Thái Thụy</span></br>
+					<span class=tooltip_bold>Diễn viên:</span> <span class=tooltip_text>Quách Ngọc Ngoan, Triệu Thị Hà, Kim Hiền, Hà Việt Dũng, Trọng Hải, Châu Thế Tâm</span></br>
+					<span class=tooltip_bold>Điểm IMDB:</span> <span class=tooltip_imdb>N/A</span></br>
+					<span class=tooltip_bold>Khởi chiếu:</span> <span class=tooltip_text>2015-11-13</span></br>
+					<span class=tooltip_content>Dựa trên một sự kiện có thật và diễn ra trong giai đoạn đầy biến động của lịch sử Việt Nam với sự phân tranh quyền lực giữa 2 chúa Trịnh - Nguyễn, Mỹ Nhân là câu chuyện về cuộc...</span></br>
+					" class="tool_tip_link2">
+                                <img src="http://lichphim.vn/assets/images/images/1445651116.jpg"/>
+                            </a>
+                        </div>
+
+                        <div class="name_item_phim"><a
+                                href="http://lichphim.vn/fbapp/chitiet/1427/my_nhan" title="
+					<span class=tooltip_title>MỸ NHÂN</span></br>
+					<span class=tooltip_bold>Thể loại:</span> <span class=tooltip_text>Võ thuật,Thần thoại</span></br>
+					<span class=tooltip_bold>Thời lượng:</span> <span class=tooltip_text> phút</span></br>
+					<span class=tooltip_bold>Đạo diễn:</span> <span class=tooltip_text>Đinh Thái Thụy</span></br>
+					<span class=tooltip_bold>Diễn viên:</span> <span class=tooltip_text>Quách Ngọc Ngoan, Triệu Thị Hà, Kim Hiền, Hà Việt Dũng, Trọng Hải, Châu Thế Tâm</span></br>
+					<span class=tooltip_bold>Điểm IMDB:</span> <span class=tooltip_imdb>N/A</span></br>
+					<span class=tooltip_bold>Khởi chiếu:</span> <span class=tooltip_text>2015-11-13</span></br>
+					<span class=tooltip_content>Dựa trên một sự kiện có thật và diễn ra trong giai đoạn đầy biến động của lịch sử Việt Nam với sự phân tranh quyền lực giữa 2 chúa Trịnh - Nguyễn, Mỹ Nhân là câu chuyện về cuộc...</span></br>
+					" class="tool_tip_link3">MỸ NHÂN</a></div>
+                        <div class="view_like">
+                            <div class="like">10</div>
+                            <div class="view">194</div>
+                        </div>
+                    </div>
+
+                    <div class="item_phimdachieu">
+                        <div class="img_item_phim">
+
+                            <a href="http://lichphim.vn/fbapp/chitiet/1430/bang_cuỚp_song_bac___heist"
+                               title="
+					<span class=tooltip_title>BĂNG CƯỚP SÒNG BẠC (HEIST)</span></br>
+					<span class=tooltip_bold>Thể loại:</span> <span class=tooltip_text>Hình sự,Hành động</span></br>
+					<span class=tooltip_bold>Thời lượng:</span> <span class=tooltip_text>109  phút</span></br>
+					<span class=tooltip_bold>Đạo diễn:</span> <span class=tooltip_text>David Mamet</span></br>
+					<span class=tooltip_bold>Diễn viên:</span> <span class=tooltip_text>Robert De Niro, Jeffrey Dean Morgan, Kate Bosworth, Dave Bautista, Morris Chestnut</span></br>
+					<span class=tooltip_bold>Điểm IMDB:</span> <span class=tooltip_imdb>N/A</span></br>
+					<span class=tooltip_bold>Khởi chiếu:</span> <span class=tooltip_text>2015-11-13</span></br>
+					<span class=tooltip_content>Luke Vaughn – một nhân viên trung thành trong sòng bài của Frank “the Pope”. Vaughn đã phải tìm đến ông chủ lâu năm của mình để hỏi vay 300.000 USD thanh toán tiền viện phí cho cô con gái...</span></br>
+					" class="tool_tip_link2">
+                                <img src="http://lichphim.vn/assets/images/images/1446606313.JPG"/>
+                            </a>
+                        </div>
+
+                        <div class="name_item_phim"><a
+                                href="http://lichphim.vn/fbapp/chitiet/1430/bang_cuỚp_song_bac___heist"
+                                title="
+					<span class=tooltip_title>BĂNG CƯỚP SÒNG BẠC (HEIST)</span></br>
+					<span class=tooltip_bold>Thể loại:</span> <span class=tooltip_text>Hình sự,Hành động</span></br>
+					<span class=tooltip_bold>Thời lượng:</span> <span class=tooltip_text>109  phút</span></br>
+					<span class=tooltip_bold>Đạo diễn:</span> <span class=tooltip_text>David Mamet</span></br>
+					<span class=tooltip_bold>Diễn viên:</span> <span class=tooltip_text>Robert De Niro, Jeffrey Dean Morgan, Kate Bosworth, Dave Bautista, Morris Chestnut</span></br>
+					<span class=tooltip_bold>Điểm IMDB:</span> <span class=tooltip_imdb>N/A</span></br>
+					<span class=tooltip_bold>Khởi chiếu:</span> <span class=tooltip_text>2015-11-13</span></br>
+					<span class=tooltip_content>Luke Vaughn – một nhân viên trung thành trong sòng bài của Frank “the Pope”. Vaughn đã phải tìm đến ông chủ lâu năm của mình để hỏi vay 300.000 USD thanh toán tiền viện phí cho cô con gái...</span></br>
+					" class="tool_tip_link3">BĂNG CƯỚP SÒNG BẠC...</a></div>
+                        <div class="view_like">
+                            <div class="like">21</div>
+                            <div class="view">211</div>
+                        </div>
+                    </div>
+
+                    <div class="item_phimdachieu">
+                        <div class="img_item_phim">
+
+                            <a href="http://lichphim.vn/fbapp/chitiet/1432/quyen_luc_chet____macbeth"
+                               title="
+					<span class=tooltip_title>QUYỀN LỰC CHẾT (MACBETH)</span></br>
+					<span class=tooltip_bold>Thể loại:</span> <span class=tooltip_text>Tâm lý</span></br>
+					<span class=tooltip_bold>Thời lượng:</span> <span class=tooltip_text>113 phút</span></br>
+					<span class=tooltip_bold>Đạo diễn:</span> <span class=tooltip_text>Justin Kurzel</span></br>
+					<span class=tooltip_bold>Diễn viên:</span> <span class=tooltip_text>Michael Fassbender, Elizabeth Debicki, Marion Cotillard</span></br>
+					<span class=tooltip_bold>Điểm IMDB:</span> <span class=tooltip_imdb>N/A</span></br>
+					<span class=tooltip_bold>Khởi chiếu:</span> <span class=tooltip_text>2015-11-13</span></br>
+					<span class=tooltip_content>Được xây dựng dựa trên tác phẩm văn học có nội dung đen tối và gây ám ảnh người đọc nhất của đại văn hào Shakespeare, MACBETH: QUYỀN LỰC CHẾT là câu chuyện xoay quanh những cuộc thanh trừng đẫm...</span></br>
+					" class="tool_tip_link2">
+                                <img src="http://lichphim.vn/assets/images/images/1446612287.jpg"/>
+                            </a>
+                        </div>
+
+                        <div class="name_item_phim"><a
+                                href="http://lichphim.vn/fbapp/chitiet/1432/quyen_luc_chet____macbeth"
+                                title="
+					<span class=tooltip_title>QUYỀN LỰC CHẾT (MACBETH)</span></br>
+					<span class=tooltip_bold>Thể loại:</span> <span class=tooltip_text>Tâm lý</span></br>
+					<span class=tooltip_bold>Thời lượng:</span> <span class=tooltip_text>113 phút</span></br>
+					<span class=tooltip_bold>Đạo diễn:</span> <span class=tooltip_text>Justin Kurzel</span></br>
+					<span class=tooltip_bold>Diễn viên:</span> <span class=tooltip_text>Michael Fassbender, Elizabeth Debicki, Marion Cotillard</span></br>
+					<span class=tooltip_bold>Điểm IMDB:</span> <span class=tooltip_imdb>N/A</span></br>
+					<span class=tooltip_bold>Khởi chiếu:</span> <span class=tooltip_text>2015-11-13</span></br>
+					<span class=tooltip_content>Được xây dựng dựa trên tác phẩm văn học có nội dung đen tối và gây ám ảnh người đọc nhất của đại văn hào Shakespeare, MACBETH: QUYỀN LỰC CHẾT là câu chuyện xoay quanh những cuộc thanh trừng đẫm...</span></br>
+					" class="tool_tip_link3">QUYỀN LỰC CHẾT </a></div>
+                        <div class="view_like">
+                            <div class="like">9</div>
+                            <div class="view">67</div>
+                        </div>
+                    </div>
+
+                    <div class="item_phimdachieu">
+                        <div class="img_item_phim">
+
+                            <a href="http://lichphim.vn/fbapp/chitiet/1433/nha_giam_dia_nguc___riot"
+                               title="
+					<span class=tooltip_title>NHÀ GIAM ĐỊA NGỤC (RIOT)</span></br>
+					<span class=tooltip_bold>Thể loại:</span> <span class=tooltip_text>Hành động</span></br>
+					<span class=tooltip_bold>Thời lượng:</span> <span class=tooltip_text>87 phút</span></br>
+					<span class=tooltip_bold>Đạo diễn:</span> <span class=tooltip_text>John Lyde</span></br>
+					<span class=tooltip_bold>Diễn viên:</span> <span class=tooltip_text>Mainstay Productions, VMI Worldwide</span></br>
+					<span class=tooltip_bold>Điểm IMDB:</span> <span class=tooltip_imdb>N/A</span></br>
+					<span class=tooltip_bold>Khởi chiếu:</span> <span class=tooltip_text>2015-11-13</span></br>
+					<span class=tooltip_content>Balam, một tên trùm tội phạm khét tiếng, tự giam mình trong ngục tối và tạo nên một thế giới tội phạm thu nhỏ trong nhà tù, một bức bình phong cho thân phận thực sự của hắn: ông trùm...</span></br>
+					" class="tool_tip_link2">
+                                <img src="http://lichphim.vn/assets/images/images/1446686762.jpg"/>
+                            </a>
+                        </div>
+
+                        <div class="name_item_phim"><a
+                                href="http://lichphim.vn/fbapp/chitiet/1433/nha_giam_dia_nguc___riot"
+                                title="
+					<span class=tooltip_title>NHÀ GIAM ĐỊA NGỤC (RIOT)</span></br>
+					<span class=tooltip_bold>Thể loại:</span> <span class=tooltip_text>Hành động</span></br>
+					<span class=tooltip_bold>Thời lượng:</span> <span class=tooltip_text>87 phút</span></br>
+					<span class=tooltip_bold>Đạo diễn:</span> <span class=tooltip_text>John Lyde</span></br>
+					<span class=tooltip_bold>Diễn viên:</span> <span class=tooltip_text>Mainstay Productions, VMI Worldwide</span></br>
+					<span class=tooltip_bold>Điểm IMDB:</span> <span class=tooltip_imdb>N/A</span></br>
+					<span class=tooltip_bold>Khởi chiếu:</span> <span class=tooltip_text>2015-11-13</span></br>
+					<span class=tooltip_content>Balam, một tên trùm tội phạm khét tiếng, tự giam mình trong ngục tối và tạo nên một thế giới tội phạm thu nhỏ trong nhà tù, một bức bình phong cho thân phận thực sự của hắn: ông trùm...</span></br>
+					" class="tool_tip_link3">NHÀ GIAM ĐỊA NGỤC...</a></div>
+                        <div class="view_like">
+                            <div class="like">29</div>
+                            <div class="view">204</div>
+                        </div>
+                    </div>
+
+                    <div class="item_phimdachieu">
+                        <div class="img_item_phim">
+
+                            <a href="http://lichphim.vn/fbapp/chitiet/1437/quay_tỚi_ben___rock_the_kasbah"
+                               title="
+					<span class=tooltip_title>QUẨY TỚI BẾN (ROCK THE KASBAH)</span></br>
+					<span class=tooltip_bold>Thể loại:</span> <span class=tooltip_text>Hài</span></br>
+					<span class=tooltip_bold>Thời lượng:</span> <span class=tooltip_text>100  phút</span></br>
+					<span class=tooltip_bold>Đạo diễn:</span> <span class=tooltip_text>Barry Levinson</span></br>
+					<span class=tooltip_bold>Diễn viên:</span> <span class=tooltip_text>Bill Murray, Kate Hudson, Danny McBride</span></br>
+					<span class=tooltip_bold>Điểm IMDB:</span> <span class=tooltip_imdb>N/A</span></br>
+					<span class=tooltip_bold>Khởi chiếu:</span> <span class=tooltip_text>2015-11-13</span></br>
+					<span class=tooltip_content><div>Quẩy Tới Bến (Rock the Kasbah) là một bộ phim Mỹ thuộc thể loại hài kịch của đạo diễn Barry Levinson và được viết kịch bản bởi Mitch Glazer. Phim có sự tham gia của nhiều ngôi lớn và được...</span></br>
+					" class="tool_tip_link2">
+                                <img src="http://lichphim.vn/assets/images/images/1447086782.jpg"/>
+                            </a>
+                        </div>
+
+                        <div class="name_item_phim"><a
+                                href="http://lichphim.vn/fbapp/chitiet/1437/quay_tỚi_ben___rock_the_kasbah"
+                                title="
+					<span class=tooltip_title>QUẨY TỚI BẾN (ROCK THE KASBAH)</span></br>
+					<span class=tooltip_bold>Thể loại:</span> <span class=tooltip_text>Hài</span></br>
+					<span class=tooltip_bold>Thời lượng:</span> <span class=tooltip_text>100  phút</span></br>
+					<span class=tooltip_bold>Đạo diễn:</span> <span class=tooltip_text>Barry Levinson</span></br>
+					<span class=tooltip_bold>Diễn viên:</span> <span class=tooltip_text>Bill Murray, Kate Hudson, Danny McBride</span></br>
+					<span class=tooltip_bold>Điểm IMDB:</span> <span class=tooltip_imdb>N/A</span></br>
+					<span class=tooltip_bold>Khởi chiếu:</span> <span class=tooltip_text>2015-11-13</span></br>
+					<span class=tooltip_content><div>Quẩy Tới Bến (Rock the Kasbah) là một bộ phim Mỹ thuộc thể loại hài kịch của đạo diễn Barry Levinson và được viết kịch bản bởi Mitch Glazer. Phim có sự tham gia của nhiều ngôi lớn và được...</span></br>
+					" class="tool_tip_link3">QUẨY TỚI BẾN </a></div>
+                        <div class="view_like">
+                            <div class="like">13</div>
+                            <div class="view">80</div>
+                        </div>
+                    </div>
+
+                    <div class="item_phimdachieu">
+                        <div class="img_item_phim">
+
+                            <a href="http://lichphim.vn/fbapp/chitiet/1249/diep_vien_007:_bong_ma___007:_spectre"
+                               title="
+					<span class=tooltip_title>ĐIỆP VIÊN 007: BÓNG MA (007: SPECTRE)</span></br>
+					<span class=tooltip_bold>Thể loại:</span> <span class=tooltip_text>Phiêu lưu,Hành động</span></br>
+					<span class=tooltip_bold>Thời lượng:</span> <span class=tooltip_text>110 phút</span></br>
+					<span class=tooltip_bold>Đạo diễn:</span> <span class=tooltip_text>Sam Mendes</span></br>
+					<span class=tooltip_bold>Diễn viên:</span> <span class=tooltip_text>Dave Bautista,Ralph Fiennes,Monica Bellucci,Daniel Craig,Christoph Waltz,Léa Seydoux</span></br>
+					<span class=tooltip_bold>Điểm IMDB:</span> <span class=tooltip_imdb>N/A</span></br>
+					<span class=tooltip_bold>Khởi chiếu:</span> <span class=tooltip_text>2015-11-06</span></br>
+					<span class=tooltip_content>Spectre bắt đầu từ một tin nhắn nặc danh được gửi đến James Bond. Anh bắt đầu lần theo dấu vết để vén bức màn bí mật về một tổ chức tội phạm có tên Spectre. Trong khi “thủ lĩnh”...</span></br>
+					" class="tool_tip_link2">
+                                <img src="http://lichphim.vn/assets/images/images/1441760802.jpg"/>
+                            </a>
+                        </div>
+
+                        <div class="name_item_phim"><a
+                                href="http://lichphim.vn/fbapp/chitiet/1249/diep_vien_007:_bong_ma___007:_spectre"
+                                title="
+					<span class=tooltip_title>ĐIỆP VIÊN 007: BÓNG MA (007: SPECTRE)</span></br>
+					<span class=tooltip_bold>Thể loại:</span> <span class=tooltip_text>Phiêu lưu,Hành động</span></br>
+					<span class=tooltip_bold>Thời lượng:</span> <span class=tooltip_text>110 phút</span></br>
+					<span class=tooltip_bold>Đạo diễn:</span> <span class=tooltip_text>Sam Mendes</span></br>
+					<span class=tooltip_bold>Diễn viên:</span> <span class=tooltip_text>Dave Bautista,Ralph Fiennes,Monica Bellucci,Daniel Craig,Christoph Waltz,Léa Seydoux</span></br>
+					<span class=tooltip_bold>Điểm IMDB:</span> <span class=tooltip_imdb>N/A</span></br>
+					<span class=tooltip_bold>Khởi chiếu:</span> <span class=tooltip_text>2015-11-06</span></br>
+					<span class=tooltip_content>Spectre bắt đầu từ một tin nhắn nặc danh được gửi đến James Bond. Anh bắt đầu lần theo dấu vết để vén bức màn bí mật về một tổ chức tội phạm có tên Spectre. Trong khi “thủ lĩnh”...</span></br>
+					" class="tool_tip_link3">ĐIỆP VIÊN 007: BÓNG...</a></div>
+                        <div class="view_like">
+                            <div class="like">53</div>
+                            <div class="view">732</div>
+                        </div>
+                    </div>
+
+                    <div class="item_phimdachieu">
+                        <div class="img_item_phim">
+
+                            <a href="http://lichphim.vn/fbapp/chitiet/1431/xac_chet_bi_an" title="
+					<span class=tooltip_title>XÁC CHẾT BÍ ẨN</span></br>
+					<span class=tooltip_bold>Thể loại:</span> <span class=tooltip_text>Hình sự</span></br>
+					<span class=tooltip_bold>Thời lượng:</span> <span class=tooltip_text>118  phút</span></br>
+					<span class=tooltip_bold>Đạo diễn:</span> <span class=tooltip_text>HUH Jong-ho</span></br>
+					<span class=tooltip_bold>Diễn viên:</span> <span class=tooltip_text>LEE Sun-kyun, KIM Ko-eun, LIM Won-hee</span></br>
+					<span class=tooltip_bold>Điểm IMDB:</span> <span class=tooltip_imdb>N/A</span></br>
+					<span class=tooltip_bold>Khởi chiếu:</span> <span class=tooltip_text>2015-11-06</span></br>
+					<span class=tooltip_content>Seong (Lee Sun-Kyun) là một luật sư trẻ tài giỏi và có đạo đức, với phương châm công việc chỉ sử dụng 1% khả năng nhưng đảm bảo 100% chiến thắng. Trong vụ kiện lần này, luật sư Seong biện...</span></br>
+					" class="tool_tip_link2">
+                                <img src="http://lichphim.vn/assets/images/images/1446610318.jpg"/>
+                            </a>
+                        </div>
+
+                        <div class="name_item_phim"><a
+                                href="http://lichphim.vn/fbapp/chitiet/1431/xac_chet_bi_an" title="
+					<span class=tooltip_title>XÁC CHẾT BÍ ẨN</span></br>
+					<span class=tooltip_bold>Thể loại:</span> <span class=tooltip_text>Hình sự</span></br>
+					<span class=tooltip_bold>Thời lượng:</span> <span class=tooltip_text>118  phút</span></br>
+					<span class=tooltip_bold>Đạo diễn:</span> <span class=tooltip_text>HUH Jong-ho</span></br>
+					<span class=tooltip_bold>Diễn viên:</span> <span class=tooltip_text>LEE Sun-kyun, KIM Ko-eun, LIM Won-hee</span></br>
+					<span class=tooltip_bold>Điểm IMDB:</span> <span class=tooltip_imdb>N/A</span></br>
+					<span class=tooltip_bold>Khởi chiếu:</span> <span class=tooltip_text>2015-11-06</span></br>
+					<span class=tooltip_content>Seong (Lee Sun-Kyun) là một luật sư trẻ tài giỏi và có đạo đức, với phương châm công việc chỉ sử dụng 1% khả năng nhưng đảm bảo 100% chiến thắng. Trong vụ kiện lần này, luật sư Seong biện...</span></br>
+					" class="tool_tip_link3">XÁC CHẾT BÍ ẨN</a></div>
+                        <div class="view_like">
+                            <div class="like">13</div>
+                            <div class="view">128</div>
+                        </div>
+                    </div>
+
+                    <div class="item_phimdachieu">
+                        <div class="img_item_phim">
+
+                            <a href="http://lichphim.vn/fbapp/chitiet/1415/mang_xa" title="
+					<span class=tooltip_title>MÃNG XÀ</span></br>
+					<span class=tooltip_bold>Thể loại:</span> <span class=tooltip_text>Kinh dị</span></br>
+					<span class=tooltip_bold>Thời lượng:</span> <span class=tooltip_text>90 phút</span></br>
+					<span class=tooltip_bold>Đạo diễn:</span> <span class=tooltip_text>Pundhevanop Dhewakul</span></br>
+					<span class=tooltip_bold>Diễn viên:</span> <span class=tooltip_text>Chakirt Yamnam</span></br>
+					<span class=tooltip_bold>Điểm IMDB:</span> <span class=tooltip_imdb>N/A</span></br>
+					<span class=tooltip_bold>Khởi chiếu:</span> <span class=tooltip_text>2015-11-04</span></br>
+					<span class=tooltip_content>Mekala một người phụ nữ giàu có, quyến rũ, yêu thích tự do do và đang sống trong một ngôi biệt thự cổ. Có lời đồn rằng bất kỳ một người đàn ông nào có tình cảm, qua lại với...</span></br>
+					" class="tool_tip_link2">
+                                <img src="http://lichphim.vn/assets/images/images/1445735253.jpg"/>
+                            </a>
+                        </div>
+
+                        <div class="name_item_phim"><a
+                                href="http://lichphim.vn/fbapp/chitiet/1415/mang_xa" title="
+					<span class=tooltip_title>MÃNG XÀ</span></br>
+					<span class=tooltip_bold>Thể loại:</span> <span class=tooltip_text>Kinh dị</span></br>
+					<span class=tooltip_bold>Thời lượng:</span> <span class=tooltip_text>90 phút</span></br>
+					<span class=tooltip_bold>Đạo diễn:</span> <span class=tooltip_text>Pundhevanop Dhewakul</span></br>
+					<span class=tooltip_bold>Diễn viên:</span> <span class=tooltip_text>Chakirt Yamnam</span></br>
+					<span class=tooltip_bold>Điểm IMDB:</span> <span class=tooltip_imdb>N/A</span></br>
+					<span class=tooltip_bold>Khởi chiếu:</span> <span class=tooltip_text>2015-11-04</span></br>
+					<span class=tooltip_content>Mekala một người phụ nữ giàu có, quyến rũ, yêu thích tự do do và đang sống trong một ngôi biệt thự cổ. Có lời đồn rằng bất kỳ một người đàn ông nào có tình cảm, qua lại với...</span></br>
+					" class="tool_tip_link3">MÃNG XÀ</a></div>
+                        <div class="view_like">
+                            <div class="like">28</div>
+                            <div class="view">391</div>
+                        </div>
+                    </div>
+
+                    <div class="item_phimdachieu">
+                        <div class="img_item_phim">
+
+                            <a href="http://lichphim.vn/fbapp/chitiet/1394/chien_binh_san_phu_thuy__the_last_witch_hunter"
+                               title="
+					<span class=tooltip_title>CHIẾN BINH SĂN PHÙ THỦY (THE LAST WITCH HUNTER)</span></br>
+					<span class=tooltip_bold>Thể loại:</span> <span class=tooltip_text>Hành động,Thần thoại</span></br>
+					<span class=tooltip_bold>Thời lượng:</span> <span class=tooltip_text>115 phút</span></br>
+					<span class=tooltip_bold>Đạo diễn:</span> <span class=tooltip_text>Breck Eisner</span></br>
+					<span class=tooltip_bold>Diễn viên:</span> <span class=tooltip_text>Vin Diesel, Rose Leslie, Elijah Wood</span></br>
+					<span class=tooltip_bold>Điểm IMDB:</span> <span class=tooltip_imdb>N/A</span></br>
+					<span class=tooltip_bold>Khởi chiếu:</span> <span class=tooltip_text>2015-10-23</span></br>
+					<span class=tooltip_content>Tiếp nối thành công của bom tấn “Fast &amp; Furious 7, nam tài tử Vin Diesel sẽ tái ngộ khán giả với tác phẩm hành động, viễn tưởng mang tên THE LAST WITCH HUNTER vào tháng 10 tới đây. Bộ...</span></br>
+					" class="tool_tip_link2">
+                                <img src="http://lichphim.vn/assets/images/images/1445218655.jpg"/>
+                            </a>
+                        </div>
+
+                        <div class="name_item_phim"><a
+                                href="http://lichphim.vn/fbapp/chitiet/1394/chien_binh_san_phu_thuy__the_last_witch_hunter"
+                                title="
+					<span class=tooltip_title>CHIẾN BINH SĂN PHÙ THỦY (THE LAST WITCH HUNTER)</span></br>
+					<span class=tooltip_bold>Thể loại:</span> <span class=tooltip_text>Hành động,Thần thoại</span></br>
+					<span class=tooltip_bold>Thời lượng:</span> <span class=tooltip_text>115 phút</span></br>
+					<span class=tooltip_bold>Đạo diễn:</span> <span class=tooltip_text>Breck Eisner</span></br>
+					<span class=tooltip_bold>Diễn viên:</span> <span class=tooltip_text>Vin Diesel, Rose Leslie, Elijah Wood</span></br>
+					<span class=tooltip_bold>Điểm IMDB:</span> <span class=tooltip_imdb>N/A</span></br>
+					<span class=tooltip_bold>Khởi chiếu:</span> <span class=tooltip_text>2015-10-23</span></br>
+					<span class=tooltip_content>Tiếp nối thành công của bom tấn “Fast &amp; Furious 7, nam tài tử Vin Diesel sẽ tái ngộ khán giả với tác phẩm hành động, viễn tưởng mang tên THE LAST WITCH HUNTER vào tháng 10 tới đây. Bộ...</span></br>
+					" class="tool_tip_link3">CHIẾN BINH SĂN PHÙ...</a></div>
+                        <div class="view_like">
+                            <div class="like">46</div>
+                            <div class="view">513</div>
+                        </div>
+                    </div>
+
+                    <div class="item_phimdachieu">
+                        <div class="img_item_phim">
+
+                            <a href="http://lichphim.vn/fbapp/chitiet/1346/cau_chuyen_luc_nua_dem___goosebumps"
+                               title="
+					<span class=tooltip_title>CÂU CHUYỆN LÚC NỬA ĐÊM (GOOSEBUMPS)</span></br>
+					<span class=tooltip_bold>Thể loại:</span> <span class=tooltip_text>Hài,Phiêu lưu</span></br>
+					<span class=tooltip_bold>Thời lượng:</span> <span class=tooltip_text>100 phút</span></br>
+					<span class=tooltip_bold>Đạo diễn:</span> <span class=tooltip_text>Rob Letterman</span></br>
+					<span class=tooltip_bold>Diễn viên:</span> <span class=tooltip_text>Odeya Rush, Dylan Minnette, Halston Sage </span></br>
+					<span class=tooltip_bold>Điểm IMDB:</span> <span class=tooltip_imdb>N/A</span></br>
+					<span class=tooltip_bold>Khởi chiếu:</span> <span class=tooltip_text>2015-10-16</span></br>
+					<span class=tooltip_content>Dựa trên bộ truyện kinh dị nổi tiếng cùng tên của tác giả R.L. Stine, Goosebumps – Câu chuyện lúc nửa đêm sẽ đưa hàng loạt những quái vật đầu sỏ, quái đản và ranh ma sống dậy trên màn...</span></br>
+					" class="tool_tip_link2">
+                                <img src="http://lichphim.vn/assets/images/images/1443517114.jpg"/>
+                            </a>
+                        </div>
+
+                        <div class="name_item_phim"><a
+                                href="http://lichphim.vn/fbapp/chitiet/1346/cau_chuyen_luc_nua_dem___goosebumps"
+                                title="
+					<span class=tooltip_title>CÂU CHUYỆN LÚC NỬA ĐÊM (GOOSEBUMPS)</span></br>
+					<span class=tooltip_bold>Thể loại:</span> <span class=tooltip_text>Hài,Phiêu lưu</span></br>
+					<span class=tooltip_bold>Thời lượng:</span> <span class=tooltip_text>100 phút</span></br>
+					<span class=tooltip_bold>Đạo diễn:</span> <span class=tooltip_text>Rob Letterman</span></br>
+					<span class=tooltip_bold>Diễn viên:</span> <span class=tooltip_text>Odeya Rush, Dylan Minnette, Halston Sage </span></br>
+					<span class=tooltip_bold>Điểm IMDB:</span> <span class=tooltip_imdb>N/A</span></br>
+					<span class=tooltip_bold>Khởi chiếu:</span> <span class=tooltip_text>2015-10-16</span></br>
+					<span class=tooltip_content>Dựa trên bộ truyện kinh dị nổi tiếng cùng tên của tác giả R.L. Stine, Goosebumps – Câu chuyện lúc nửa đêm sẽ đưa hàng loạt những quái vật đầu sỏ, quái đản và ranh ma sống dậy trên màn...</span></br>
+					" class="tool_tip_link3">CÂU CHUYỆN LÚC NỬA...</a></div>
+                        <div class="view_like">
+                            <div class="like">54</div>
+                            <div class="view">584</div>
+                        </div>
+                    </div>
+
+                    <div class="item_phimdachieu">
+                        <div class="img_item_phim">
+
+                            <a href="http://lichphim.vn/fbapp/chitiet/1165/pan_va_vung_dat_neverland"
+                               title="
+					<span class=tooltip_title>PAN VÀ VÙNG ĐẤT NEVERLAND</span></br>
+					<span class=tooltip_bold>Thể loại:</span> <span class=tooltip_text>Hành động,Phiêu lưu</span></br>
+					<span class=tooltip_bold>Thời lượng:</span> <span class=tooltip_text>90 phút</span></br>
+					<span class=tooltip_bold>Đạo diễn:</span> <span class=tooltip_text>Joe Wright</span></br>
+					<span class=tooltip_bold>Diễn viên:</span> <span class=tooltip_text>Garrett Hedlund,Hugh Jackman,Levi Miller,Rooney Mara,Amanda Seyfried</span></br>
+					<span class=tooltip_bold>Điểm IMDB:</span> <span class=tooltip_imdb>N/A</span></br>
+					<span class=tooltip_bold>Khởi chiếu:</span> <span class=tooltip_text>2015-10-09</span></br>
+					<span class=tooltip_content>&nbsp;Peter Pan - một cậu bé mồ côi cha mẹ từ nhỏ và tình cờ thất lạc vào một vùng đất thần tiên - Neverland, nơi mà con người sống bất tử, không bao giờ già đi và có thể...</span></br>
+					" class="tool_tip_link2">
+                                <img src="http://lichphim.vn/assets/images/images/1444268823.jpg"/>
+                            </a>
+                        </div>
+
+                        <div class="name_item_phim"><a
+                                href="http://lichphim.vn/fbapp/chitiet/1165/pan_va_vung_dat_neverland"
+                                title="
+					<span class=tooltip_title>PAN VÀ VÙNG ĐẤT NEVERLAND</span></br>
+					<span class=tooltip_bold>Thể loại:</span> <span class=tooltip_text>Hành động,Phiêu lưu</span></br>
+					<span class=tooltip_bold>Thời lượng:</span> <span class=tooltip_text>90 phút</span></br>
+					<span class=tooltip_bold>Đạo diễn:</span> <span class=tooltip_text>Joe Wright</span></br>
+					<span class=tooltip_bold>Diễn viên:</span> <span class=tooltip_text>Garrett Hedlund,Hugh Jackman,Levi Miller,Rooney Mara,Amanda Seyfried</span></br>
+					<span class=tooltip_bold>Điểm IMDB:</span> <span class=tooltip_imdb>N/A</span></br>
+					<span class=tooltip_bold>Khởi chiếu:</span> <span class=tooltip_text>2015-10-09</span></br>
+					<span class=tooltip_content>&nbsp;Peter Pan - một cậu bé mồ côi cha mẹ từ nhỏ và tình cờ thất lạc vào một vùng đất thần tiên - Neverland, nơi mà con người sống bất tử, không bao giờ già đi và có thể...</span></br>
+					" class="tool_tip_link3">PAN VÀ VÙNG ĐẤT...</a></div>
+                        <div class="view_like">
+                            <div class="like">44</div>
+                            <div class="view">595</div>
+                        </div>
+                    </div>
+
+                    <div class="item_phimdachieu">
+                        <div class="img_item_phim">
+
+                            <a href="http://lichphim.vn/fbapp/chitiet/1396/tham_tu_ga_mo___an_accidental_detective"
+                               title="
+					<span class=tooltip_title>THÁM TỬ GÀ MƠ (AN ACCIDENTAL DETECTIVE)</span></br>
+					<span class=tooltip_bold>Thể loại:</span> <span class=tooltip_text>Hài</span></br>
+					<span class=tooltip_bold>Thời lượng:</span> <span class=tooltip_text>120 phút</span></br>
+					<span class=tooltip_bold>Đạo diễn:</span> <span class=tooltip_text>Kim Jung-Hoon</span></br>
+					<span class=tooltip_bold>Diễn viên:</span> <span class=tooltip_text>Kwon Sang-Woo, Sung Dong-Il, Seo Young-Hee, Park Hae-Joon</span></br>
+					<span class=tooltip_bold>Điểm IMDB:</span> <span class=tooltip_imdb>N/A</span></br>
+					<span class=tooltip_bold>Khởi chiếu:</span> <span class=tooltip_text>2015-10-09</span></br>
+					<span class=tooltip_content>Vô cùng bận rộn với công việc ở cửa hàng truyện tranh nhưng khi hay tin anh bạn nối khố là thám tử Joon-Soo (Park Hae-Joon thủ vai) bị bắt vì liên đới trong một vụ án mạng, Dae-Man (Kwon...</span></br>
+					" class="tool_tip_link2">
+                                <img src="http://lichphim.vn/assets/images/images/1443518516.jpg"/>
+                            </a>
+                        </div>
+
+                        <div class="name_item_phim"><a
+                                href="http://lichphim.vn/fbapp/chitiet/1396/tham_tu_ga_mo___an_accidental_detective"
+                                title="
+					<span class=tooltip_title>THÁM TỬ GÀ MƠ (AN ACCIDENTAL DETECTIVE)</span></br>
+					<span class=tooltip_bold>Thể loại:</span> <span class=tooltip_text>Hài</span></br>
+					<span class=tooltip_bold>Thời lượng:</span> <span class=tooltip_text>120 phút</span></br>
+					<span class=tooltip_bold>Đạo diễn:</span> <span class=tooltip_text>Kim Jung-Hoon</span></br>
+					<span class=tooltip_bold>Diễn viên:</span> <span class=tooltip_text>Kwon Sang-Woo, Sung Dong-Il, Seo Young-Hee, Park Hae-Joon</span></br>
+					<span class=tooltip_bold>Điểm IMDB:</span> <span class=tooltip_imdb>N/A</span></br>
+					<span class=tooltip_bold>Khởi chiếu:</span> <span class=tooltip_text>2015-10-09</span></br>
+					<span class=tooltip_content>Vô cùng bận rộn với công việc ở cửa hàng truyện tranh nhưng khi hay tin anh bạn nối khố là thám tử Joon-Soo (Park Hae-Joon thủ vai) bị bắt vì liên đới trong một vụ án mạng, Dae-Man (Kwon...</span></br>
+					" class="tool_tip_link3">THÁM TỬ GÀ MƠ </a></div>
+                        <div class="view_like">
+                            <div class="like">18</div>
+                            <div class="view">226</div>
+                        </div>
+                    </div>
+
+                    <div class="item_phimdachieu">
+                        <div class="img_item_phim">
+
+                            <a href="http://lichphim.vn/fbapp/chitiet/1255/toi_thay_hoa_vang_tren_co_xanh___dear_brother"
+                               title="
+					<span class=tooltip_title>TÔI THẤY HOA VÀNG TRÊN CỎ XANH (DEAR BROTHER)</span></br>
+					<span class=tooltip_bold>Thể loại:</span> <span class=tooltip_text>Tình cảm,Tâm lý</span></br>
+					<span class=tooltip_bold>Thời lượng:</span> <span class=tooltip_text>90 phút</span></br>
+					<span class=tooltip_bold>Đạo diễn:</span> <span class=tooltip_text>Victor Vũ</span></br>
+					<span class=tooltip_bold>Diễn viên:</span> <span class=tooltip_text>Thịnh Vinh, Trọng Khang, Thanh Mỹ</span></br>
+					<span class=tooltip_bold>Điểm IMDB:</span> <span class=tooltip_imdb>N/A</span></br>
+					<span class=tooltip_bold>Khởi chiếu:</span> <span class=tooltip_text>2015-10-02</span></br>
+					<span class=tooltip_content>Tôi thấy hoa vàng trên cỏ xanh” là bộ phim chuyển thể từ quyển truyện dài cùng tên của nhà văn Nguyễn Nhật Ánh, từng tạo nên cơn sốt và đạt giải thưởng văn học ASEAN vào năm 2010. Chuyện...</span></br>
+					" class="tool_tip_link2">
+                                <img src="http://lichphim.vn/assets/images/images/1437959560.jpg"/>
+                            </a>
+                        </div>
+
+                        <div class="name_item_phim"><a
+                                href="http://lichphim.vn/fbapp/chitiet/1255/toi_thay_hoa_vang_tren_co_xanh___dear_brother"
+                                title="
+					<span class=tooltip_title>TÔI THẤY HOA VÀNG TRÊN CỎ XANH (DEAR BROTHER)</span></br>
+					<span class=tooltip_bold>Thể loại:</span> <span class=tooltip_text>Tình cảm,Tâm lý</span></br>
+					<span class=tooltip_bold>Thời lượng:</span> <span class=tooltip_text>90 phút</span></br>
+					<span class=tooltip_bold>Đạo diễn:</span> <span class=tooltip_text>Victor Vũ</span></br>
+					<span class=tooltip_bold>Diễn viên:</span> <span class=tooltip_text>Thịnh Vinh, Trọng Khang, Thanh Mỹ</span></br>
+					<span class=tooltip_bold>Điểm IMDB:</span> <span class=tooltip_imdb>N/A</span></br>
+					<span class=tooltip_bold>Khởi chiếu:</span> <span class=tooltip_text>2015-10-02</span></br>
+					<span class=tooltip_content>Tôi thấy hoa vàng trên cỏ xanh” là bộ phim chuyển thể từ quyển truyện dài cùng tên của nhà văn Nguyễn Nhật Ánh, từng tạo nên cơn sốt và đạt giải thưởng văn học ASEAN vào năm 2010. Chuyện...</span></br>
+					" class="tool_tip_link3">TÔI THẤY HOA VÀNG...</a></div>
+                        <div class="view_like">
+                            <div class="like">107</div>
+                            <div class="view">1.72k</div>
+                        </div>
+                    </div>
+
+                    <div class="item_phimdachieu">
+                        <div class="img_item_phim">
+
+                            <a href="http://lichphim.vn/fbapp/chitiet/1194/khach_san_huyen_bi_2_____hotel_transylvania_2"
+                               title="
+					<span class=tooltip_title>KHÁCH SẠN HUYỀN BÍ 2  (HOTEL TRANSYLVANIA 2)</span></br>
+					<span class=tooltip_bold>Thể loại:</span> <span class=tooltip_text>Hoạt hình</span></br>
+					<span class=tooltip_bold>Thời lượng:</span> <span class=tooltip_text>91 phút</span></br>
+					<span class=tooltip_bold>Đạo diễn:</span> <span class=tooltip_text>Genndy Tartakovsky</span></br>
+					<span class=tooltip_bold>Diễn viên:</span> <span class=tooltip_text>David Spade,Kevin Jame,Adam Sandler Selena Gomez,Andy Samberg</span></br>
+					<span class=tooltip_bold>Điểm IMDB:</span> <span class=tooltip_imdb>N/A</span></br>
+					<span class=tooltip_bold>Khởi chiếu:</span> <span class=tooltip_text>2015-09-25</span></br>
+					<span class=tooltip_content>Hotel Transylvania 2 (tựa Việt: Khách sạn huyền bí 2) là câu chuyện tiếp theo của phần 1, sau khi tiếp nhận con rể đến từ thế giới loài người, bá tước Dracula đã nới lỏng chính sách của khách...</span></br>
+					" class="tool_tip_link2">
+                                <img src="http://lichphim.vn/assets/images/images/1432626683.jpg"/>
+                            </a>
+                        </div>
+
+                        <div class="name_item_phim"><a
+                                href="http://lichphim.vn/fbapp/chitiet/1194/khach_san_huyen_bi_2_____hotel_transylvania_2"
+                                title="
+					<span class=tooltip_title>KHÁCH SẠN HUYỀN BÍ 2  (HOTEL TRANSYLVANIA 2)</span></br>
+					<span class=tooltip_bold>Thể loại:</span> <span class=tooltip_text>Hoạt hình</span></br>
+					<span class=tooltip_bold>Thời lượng:</span> <span class=tooltip_text>91 phút</span></br>
+					<span class=tooltip_bold>Đạo diễn:</span> <span class=tooltip_text>Genndy Tartakovsky</span></br>
+					<span class=tooltip_bold>Diễn viên:</span> <span class=tooltip_text>David Spade,Kevin Jame,Adam Sandler Selena Gomez,Andy Samberg</span></br>
+					<span class=tooltip_bold>Điểm IMDB:</span> <span class=tooltip_imdb>N/A</span></br>
+					<span class=tooltip_bold>Khởi chiếu:</span> <span class=tooltip_text>2015-09-25</span></br>
+					<span class=tooltip_content>Hotel Transylvania 2 (tựa Việt: Khách sạn huyền bí 2) là câu chuyện tiếp theo của phần 1, sau khi tiếp nhận con rể đến từ thế giới loài người, bá tước Dracula đã nới lỏng chính sách của khách...</span></br>
+					" class="tool_tip_link3">KHÁCH SẠN HUYỀN...</a></div>
+                        <div class="view_like">
+                            <div class="like">326</div>
+                            <div class="view">1.56k</div>
+                        </div>
+                    </div>
+
+                    <div class="item_phimdachieu">
+                        <div class="img_item_phim">
+
+                            <a href="http://lichphim.vn/fbapp/chitiet/1278/xac_uỚp_tra_thu____tomb_of_the_pharaoh_queen"
+                               title="
+					<span class=tooltip_title>XÁC ƯỚP TRẢ THÙ (TOMB OF THE PHARAOH QUEEN)</span></br>
+					<span class=tooltip_bold>Thể loại:</span> <span class=tooltip_text>Kinh dị</span></br>
+					<span class=tooltip_bold>Thời lượng:</span> <span class=tooltip_text>5 phút</span></br>
+					<span class=tooltip_bold>Đạo diễn:</span> <span class=tooltip_text>-</span></br>
+					<span class=tooltip_bold>Diễn viên:</span> <span class=tooltip_text>-</span></br>
+					<span class=tooltip_bold>Điểm IMDB:</span> <span class=tooltip_imdb>N/A</span></br>
+					<span class=tooltip_bold>Khởi chiếu:</span> <span class=tooltip_text>2015-05-30</span></br>
+					<span class=tooltip_content>Ngôi mộ cùng những xác ướp Ai Cập vô cùng huyền bí...sẽ đem đến cho khán giả yêu điện ảnh 4D những trải nghiệm cảm giác cực mạnh, cực hấp dẫn. Xác ướp trả thù/ Tomb of The Pharaoh Queen...</span></br>
+					" class="tool_tip_link2">
+                                <img src="http://lichphim.vn/assets/images/images/1433123827.jpg"/>
+                            </a>
+                        </div>
+
+                        <div class="name_item_phim"><a
+                                href="http://lichphim.vn/fbapp/chitiet/1278/xac_uỚp_tra_thu____tomb_of_the_pharaoh_queen"
+                                title="
+					<span class=tooltip_title>XÁC ƯỚP TRẢ THÙ (TOMB OF THE PHARAOH QUEEN)</span></br>
+					<span class=tooltip_bold>Thể loại:</span> <span class=tooltip_text>Kinh dị</span></br>
+					<span class=tooltip_bold>Thời lượng:</span> <span class=tooltip_text>5 phút</span></br>
+					<span class=tooltip_bold>Đạo diễn:</span> <span class=tooltip_text>-</span></br>
+					<span class=tooltip_bold>Diễn viên:</span> <span class=tooltip_text>-</span></br>
+					<span class=tooltip_bold>Điểm IMDB:</span> <span class=tooltip_imdb>N/A</span></br>
+					<span class=tooltip_bold>Khởi chiếu:</span> <span class=tooltip_text>2015-05-30</span></br>
+					<span class=tooltip_content>Ngôi mộ cùng những xác ướp Ai Cập vô cùng huyền bí...sẽ đem đến cho khán giả yêu điện ảnh 4D những trải nghiệm cảm giác cực mạnh, cực hấp dẫn. Xác ướp trả thù/ Tomb of The Pharaoh Queen...</span></br>
+					" class="tool_tip_link3">XÁC ƯỚP TRẢ THÙ </a></div>
+                        <div class="view_like">
+                            <div class="like">33</div>
+                            <div class="view">1.15k</div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <div class="col_2">
+                <div class="box3">
+                    <div class="content_box">
+                        <div class="invite_friend">
+                            <div class="invite_fr">
+							<span class='MBT-FB'>
+							 <a href='#'
+                                onclick="sendRequestViaMultiFriendSelector(); return false;">Invite
+                                 your friends</a>
+							</span>
+                            </div>
+                        </div>
+                        <div class="friend_like">
+                            <div class="title_friend_like">Friends liked app</div>
+                            <div class="friend_l">
+                                <div class="fb-like-box"
+                                     data-href="https://www.facebook.com/vCinema.ait"
+                                     data-width="130" data-colorscheme="light"
+                                     data-show-faces="true" data-header="false" data-stream="false"
+                                     data-show-border="false"></div>
+                            </div>
+                        </div>
+                        <div class="down_app">
+                            <div class="title_down_app">Use app on mobile</div>
+                            <div class="item_down"><a
+                                    href="https://itunes.apple.com/us/app/vcinema-lich-phim-chieu-rap/id475727789?mt=8"
+                                    target="_blank"><img alt=""
+                                                         src="http://lichphim.vn/assets/fbapp/images/qr_ios.png"
+                                                         border="0"></a></div>
+                            <div class="item_down"><a
+                                    href="https://play.google.com/store/apps/details?id=ait.vn.vcinema"
+                                    target="_blank"><img alt=""
+                                                         src="http://lichphim.vn/assets/fbapp/images/qr_android.png"
+                                                         border="0"></a></div>
+                            <div class="item_down"><a
+                                    href="http://www.windowsphone.com/vi-vn/store/app/l%E1%BB%8Bch-phim/bd16cab3-1785-42ec-8c32-56389eb6a1da"
+                                    target="_blank"><img alt=""
+                                                         src="http://lichphim.vn/assets/fbapp/images/qr_winphone.png"
+                                                         border="0"></a></div>
+                            <div class="text_down_app">Follow hot news & promotion</div>
+                        </div>
+                        <div class="bt_view_all"><a href="https://www.facebook.com/vCinema.ait"
+                                                    style="color:white; text-decoration:none"
+                                                    target="_blank">vCinema Fanpage</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+
+			  var _gaq = _gaq || [];
+			  _gaq.push(['_setAccount', 'UA-34613009-1']);
+			  _gaq.push(['_trackPageview']);
+
+			  (function() {
+			    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			  })();
+
+
+</script>
+</body>
+</html>
+
