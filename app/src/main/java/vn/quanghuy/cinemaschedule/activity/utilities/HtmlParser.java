@@ -161,7 +161,7 @@ public class HtmlParser {
 
     /**
      * @param titleContent: get titleContent from title in html link
-     * @param movie:        set atttribute for movie object
+     * @param movie:        set attribute for movie object
      */
     private void solveTitleContent(String titleContent, Movie movie) {
         // TODO Auto-generated method stub

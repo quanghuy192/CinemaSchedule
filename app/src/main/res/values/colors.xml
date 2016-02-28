@@ -6,4 +6,7 @@
     <color name="color_preloader_center">#00CCCC</color>
     <color name="color_preloader_end">#505050</color>
     <color name="color_preloader_start">#505050</color>
+    <color name="content_text_cl">#FFBF00</color>
+    <color name="title_cl">#FFFFFF</color>
+
 </resources>
