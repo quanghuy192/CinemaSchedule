@@ -1,89 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
 
     <ImageView
         android:id="@+id/cinemaImg_infor"
-        android:layout_width="150sp"
-        android:layout_height="150dp"
+        android:layout_width="170sp"
+        android:layout_height="170dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_margin="7dp"
-        android:src="@android:drawable/btn_star_big_on"
-        />
+        android:src="@android:drawable/btn_star_big_on" />
 
     <TextView
         android:id="@+id/cinemaTitle_info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#FF0000"
         android:layout_alignTop="@id/cinemaImg_infor"
+        android:layout_margin="7dp"
         android:layout_toRightOf="@id/cinemaImg_infor"
         android:text="Title"
-        android:layout_margin="7dp"
-        android:textSize="35sp"
-        />
+        android:textColor="@color/title_cl"
+        android:textSize="35sp" />
+
     <TextView
         android:id="@+id/cinemaDate_info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#0000FF"
         android:layout_alignLeft="@id/cinemaTitle_info"
-        android:layout_toRightOf="@id/cinemaImg_infor"
         android:layout_below="@id/cinemaTitle_info"
-        android:text="Title"
-        android:layout_marginTop="7dp"
         android:layout_marginLeft="7dp"
-        android:textSize="13sp"
-        />
+        android:layout_marginTop="7dp"
+        android:layout_toRightOf="@id/cinemaImg_infor"
+        android:text="Title"
+        android:textColor="@color/content_text_cl"
+        android:textSize="17sp" />
+
     <TextView
         android:id="@+id/cinemaType_info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#0000FF"
         android:layout_alignLeft="@id/cinemaTitle_info"
-        android:layout_toRightOf="@id/cinemaImg_infor"
         android:layout_below="@id/cinemaDate_info"
-        android:text="Title"
         android:layout_marginLeft="7dp"
-        android:textSize="13sp"
-        />
+        android:layout_toRightOf="@id/cinemaImg_infor"
+        android:text="Title"
+        android:textColor="@color/content_text_cl"
+        android:textSize="17sp" />
+
     <TextView
         android:id="@+id/cinemaImdb_info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#0000FF"
         android:layout_alignLeft="@id/cinemaTitle_info"
-        android:layout_toRightOf="@id/cinemaImg_infor"
         android:layout_below="@id/cinemaType_info"
-        android:text="Title"
         android:layout_marginLeft="7dp"
-        android:textSize="13sp"
-        />
+        android:layout_toRightOf="@id/cinemaImg_infor"
+        android:text="Title"
+        android:textColor="@color/content_text_cl"
+        android:textSize="17sp" />
+
     <TextView
         android:id="@+id/cinemaDirector_info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#0000FF"
         android:layout_alignLeft="@id/cinemaTitle_info"
-        android:layout_toRightOf="@id/cinemaImg_infor"
         android:layout_below="@id/cinemaImdb_info"
-        android:text="Title"
         android:layout_marginLeft="7dp"
-        android:textSize="13sp"
-        />
+        android:layout_toRightOf="@id/cinemaImg_infor"
+        android:text="Title"
+        android:textColor="@color/content_text_cl"
+        android:textSize="17sp" />
+
     <TextView
         android:id="@+id/cinemaActor_info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#0000FF"
         android:layout_alignLeft="@id/cinemaTitle_info"
-        android:layout_toRightOf="@id/cinemaImg_infor"
         android:layout_below="@id/cinemaDirector_info"
-        android:text="Title"
         android:layout_marginLeft="7dp"
-        android:textSize="13sp"
-        />
+        android:layout_toRightOf="@id/cinemaImg_infor"
+        android:text="Title"
+        android:textColor="@color/content_text_cl"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/cinemaContent_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/cinemaImg_infor"
+        android:layout_margin="13dp"
+        android:text="Nội dung"
+        android:textColor="@color/title_cl"
+        android:textSize="35sp" />
+
+    <RelativeLayout
+        android:id="@+id/layoutContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cinemaContent_info"
+        android:layout_margin="13dp"
+        android:background="@color/title_cl">
+
+        <TextView
+            android:id="@+id/cinemaContent_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="7dp"
+            android:textColor="@color/color_preloader_end"
+            android:textSize="19sp" />
+    </RelativeLayout>
+
+    <Gallery
+        android:id="@+id/cinemaGallery_infor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="13dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        ></Gallery>
+
 
 </RelativeLayout>
